@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RedisMapTest {
 
-    private final RedisMap redisMap = new RedisMap();
+    private final String host = "127.0.0.1";
+    private final int port = 6379;
+    private final RedisMap redisMap = new RedisMap(host, port);
 
     @Test
     void testGetAndGetOnSuccess() {
