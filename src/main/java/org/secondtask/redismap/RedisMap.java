@@ -9,10 +9,10 @@ import java.util.Set;
 
 public class RedisMap implements Map<String, String> {
 
-    private final Jedis jedis = new Jedis();
+    private final Jedis jedis;
 
-    public RedisMap() {
-
+    public RedisMap(String host, int port) {
+        this.jedis = new Jedis(host, port);
     }
 
     @Override
