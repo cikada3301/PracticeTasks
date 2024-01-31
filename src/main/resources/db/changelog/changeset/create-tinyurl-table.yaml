@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tinyurl
+      author: admin
+      changes:
+        - createTable:
+            tableName: tiny_urls
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: base_url
+                  type: varchar(255)
+              - column:
+                  name: tiny_url_value
+                  type: varchar(255)
+              - column:
+                  name: expiration_date_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
