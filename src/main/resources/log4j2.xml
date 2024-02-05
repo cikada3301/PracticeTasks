@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="TRACE" packages="org.example">
+    <Appenders>
+        <KafkaAppender name="Kafka" topic="logs-topic" bootstrapServers="localhost:9092">
+            <PatternLayout pattern="%date %message"/>
+        </KafkaAppender>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Kafka"/>
+        </Root>
+    </Loggers>
+</Configuration>
